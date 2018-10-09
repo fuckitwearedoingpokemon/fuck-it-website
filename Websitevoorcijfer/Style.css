@@ -11,41 +11,64 @@ a:hover{
 body{
     margin: 0;
 }
-nav{
-    position: relative;
-    background-color: rgb(46, 18, 38);
-    display: flex;
-    justify-content: space-between;
-}
-nav ul{
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
-}
-nav a {
+a {
     text-decoration: none;
-    color: paleturquoise;
-    padding: 15px;
-    font-family: sans-serif;
-    font-size: 18px;
-}
-nav a:hover {
-    color: white;
-}
-nav ul {
-    list-style: none;
-}
-ul#Sub1 li {
+  }
+  
+  nav {
+      font-family: monospace;
+  }
+  
+  ul {
+    background: darkorange;
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+  }
+  
+  li {
+      color: #fff;
+    background: darkorange;
+      display: block;
+      float: left;
+      padding: 1rem;
+      position: relative;
+      text-decoration: none;
+    transition-duration: 0.5s;
+  }
+    
+  li a {
+    color: #fff;
+  }
+  
+  li:hover {
+      background:orangered;
+      cursor: pointer;
+  }
+  
+  ul li ul {
+      background: orange;
+      visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+      position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+      left: 0;
     display: none;
-}
-li:hover > ul#Sub1 li {
-    display: flex;
-    flex: 1;
-    left: 0;
-    top: 100%;
+  }
+  
+  ul li:hover > ul,
+  ul li:focus-within > ul, /* this is the line we add */
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  
+  ul li ul li {
+      clear: both;
     width: 100%;
-}
+  }
 
 
