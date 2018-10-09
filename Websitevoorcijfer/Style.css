@@ -1,5 +1,8 @@
-html {
-    background-color: rgb(226, 226, 226);
+html{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+background-size: cover;
 }
 a:hover{
     cursor: crosshair;  
@@ -10,7 +13,7 @@ body{
 }
 nav{
     position: relative;
-    background-color: #f8f8f8;
+    background-color: rgb(46, 18, 38);
     display: flex;
     justify-content: space-between;
 }
@@ -23,13 +26,13 @@ nav ul{
 }
 nav a {
     text-decoration: none;
-    color: #777;
+    color: paleturquoise;
     padding: 15px;
     font-family: sans-serif;
     font-size: 18px;
 }
 nav a:hover {
-    color: #000;
+    color: white;
 }
 nav ul {
     list-style: none;
@@ -44,10 +47,5 @@ li:hover > ul#Sub1 li {
     top: 100%;
     width: 100%;
 }
-html{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-background-size: cover;
-}
+
 
