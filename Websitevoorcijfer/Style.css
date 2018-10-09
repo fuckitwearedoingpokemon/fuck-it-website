@@ -2,7 +2,8 @@ html {
     background-color: rgb(226, 226, 226);
 }
 a:hover{
-    cursor: crosshair;    
+    cursor: crosshair;  
+    color: white;  
 }
 
 nav{
