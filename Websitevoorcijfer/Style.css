@@ -59,7 +59,7 @@ a {
   }
   
   ul li:hover > ul,
-  ul li:focus-within > ul, /* this is the line we add */
+  ul li:focus-within > ul,
   ul li ul:hover {
     visibility: visible;
     opacity: 1;
