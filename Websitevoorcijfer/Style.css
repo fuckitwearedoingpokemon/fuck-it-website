@@ -9,6 +9,7 @@ body{
     margin: 0;
 }
 nav{
+    position: relative;
     background-color: #f8f8f8;
     display: flex;
     justify-content: space-between;
@@ -35,10 +36,13 @@ nav ul {
 }
 ul#Sub1 li {
     display: none;
-    list-style: none;
 }
 li:hover > ul#Sub1 li {
     display: flex;
+    flex: 1;
+    left: 0;
+    top: 100%;
+    width: 100%;
 }
 html{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
