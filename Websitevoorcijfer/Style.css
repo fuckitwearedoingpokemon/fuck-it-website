@@ -43,9 +43,22 @@ ul#Sub1 li {
 li:hover > ul#Sub1 li {
     display: flex;
     flex: 1;
+<<<<<<< HEAD
     left: 0;
     top: 100%;
     width: 100%;
+=======
+    text-align: center;
+    margin: 10px;
+    padding: 8px; 
+}
+
+html{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+background-size: cover;
+>>>>>>> Noah
 }
 
 
