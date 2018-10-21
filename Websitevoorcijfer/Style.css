@@ -20,8 +20,8 @@ background-size: cover;
 }
 footer
 {
-    
-color: white;
-
+    position: absolute;
+    color: white;
+    bottom: 0;
 
 }
