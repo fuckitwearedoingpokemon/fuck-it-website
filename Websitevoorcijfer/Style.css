@@ -1,12 +1,22 @@
-html{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center fixed; 
+html
+{
+    background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-background-size: cover;
+    background-size: cover;
 }
-a:hover{
-    cursor: crosshair;  
-    color: white;  
+a
+{
+color: blueviolet;
+
+
+
+}
+a:hover
+{    
+    color: white;
+    cursor:pointer;  
 }
 body{
     margin: 0;
