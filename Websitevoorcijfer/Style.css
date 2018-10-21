@@ -8,7 +8,7 @@ html
 }
 a
 {
-color: blueviolet;
+color: #420dab;
 }
 a:hover
 {    
@@ -35,12 +35,22 @@ footer
 {        
     display: flex;  
     flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 0 1 auto;
+    background-color: white;
 }
 
 
-.container a
-{   
-    background-color: orange;
-    
-    
+
+.container a.active
+{
+    background-image: url("MediaFiles/pokemonwhite.png");    
+}
+.container a:not(.active)
+{
+    background-image: url("MediaFiles/pokemondarklarge.png")    
+}
+.container a:hover
+{
+    background-image: url("MediaFiles/pokemongrey.png")
 }
