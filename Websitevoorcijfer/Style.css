@@ -5,6 +5,7 @@ html
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding-bottom: 5cm; 
 }
 a
 {
@@ -29,6 +30,7 @@ footer
     color: white;
     bottom: 0;
     position: fixed;
+    background-image: url(MediaFiles/footerbackground.png);
 
 }
 .container
@@ -108,32 +110,37 @@ text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, 
 
 .inhoud
 {
-color : white;
-padding-bottom: 5cm;    
+color : white;   
 }
 .inhoud img
 {
 height: 30px;
 width: 30px;
 }
+.top10
+{
+border: 2px;
+border-style: solid;
+border-color: #420dab;
+float: left;
+display: flex;
+flex-direction: column;
+}
+
 
 .spoiler 
 {
-    opacity: 0;
-    /* background-image: url(MediaFiles/spoiler.png) */
-
-}
-/* .spoiler:hover
-{
-   
     
-} */
+    opacity: 0;
+    
+}
+
 
 @keyframes blacktogrey
 {
     from 
     {
-        background-image: url(MediaFiles/pokemondarklarge.png); width: 0px; height: 18px;
+        /* background-image: url(MediaFiles/pokemondarklarge.png);*/ width: 0px; height: 18px; 
     }
     to   
     {
@@ -144,6 +151,7 @@ width: 30px;
 {
     from 
     {
+        font-size: 90%;
         opacity: 0;  
             
     }
@@ -153,45 +161,57 @@ width: 30px;
         font-size: 110%
     }
 }
+
+
+
 .spoiler:nth-of-type(1):hover
 {
     animation-name: Spoiler;
     animation-duration: 1s;
     opacity: 1;
+    font-size: 110%;
+    border: 10px;
+    border-color: #420dab;  
 }
 .spoiler:nth-of-type(2):hover
 {
     animation-name: Spoiler;
     animation-duration: 1s;
     opacity: 1;
+    font-size: 110%
 }
 .spoiler:nth-of-type(3):hover
 {
     animation-name: Spoiler;
     animation-duration: 1s;
     opacity: 1;
+    font-size: 110%
 }
 .spoiler:nth-of-type(4):hover
 {
     animation-name: Spoiler;
     animation-duration: 1s;
     opacity: 1;
+    font-size: 110%
 }
 .spoiler:nth-of-type(5):hover
 {
     animation-name: Spoiler;
     animation-duration: 1s;
     opacity: 1;
+    font-size: 110%
 }
 .spoiler:nth-of-type(6):hover
 {
     animation-name: Spoiler;
     animation-duration: 1s;
     opacity: 1;
+    font-size: 110%
 }
 .spoiler:nth-of-type(7):hover
 {
     animation-name: Spoiler;
     animation-duration: 1s;
     opacity: 1;
+    font-size: 110%
 } 
