@@ -11,7 +11,7 @@ a
 color: #420dab;
 }
 
-p, h1, h2
+p, h1, h2, h3
 {
     color: white;
     text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
@@ -120,15 +120,14 @@ width: 30px;
 .spoiler 
 {
     opacity: 0;
+    /* background-image: url(MediaFiles/spoiler.png) */
 
 }
-.spoiler:hover
+/* .spoiler:hover
 {
-    animation-name: Spoiler;
-    animation-duration: 1s;
-    opacity: 1;
-
-}
+   
+    
+} */
 
 @keyframes blacktogrey
 {
@@ -146,12 +145,53 @@ width: 30px;
     from 
     {
         opacity: 0; 
-
+        /* background-image: url(MediaFiles/spoiler.png) */
     }
     to
     {
         opacity: 1;
+        /* background-image: none; */
     }
-
-
+}
+.spoiler:nth-of-type(1):hover
+{
+    animation-name: Spoiler;
+    animation-duration: 1s;
+    opacity: 1;
+}
+.spoiler:nth-of-type(2):hover
+{
+    animation-name: Spoiler;
+    animation-duration: 1s;
+    opacity: 1;
+}
+.spoiler:nth-of-type(3):hover
+{
+    animation-name: Spoiler;
+    animation-duration: 1s;
+    opacity: 1;
+}
+.spoiler:nth-of-type(4):hover
+{
+    animation-name: Spoiler;
+    animation-duration: 1s;
+    opacity: 1;
+}
+.spoiler:nth-of-type(5):hover
+{
+    animation-name: Spoiler;
+    animation-duration: 1s;
+    opacity: 1;
+}
+.spoiler:nth-of-type(6):hover
+{
+    animation-name: Spoiler;
+    animation-duration: 1s;
+    opacity: 1;
+}
+.spoiler:nth-of-type(7):hover
+{
+    animation-name: Spoiler;
+    animation-duration: 1s;
+    opacity: 1;
 }
