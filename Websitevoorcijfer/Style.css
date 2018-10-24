@@ -11,6 +11,11 @@ a
 color: #420dab;
 }
 
+p, h1, h2
+{
+    color: white;
+    text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
+}
 
 
 body{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center fixed; 
@@ -42,7 +47,7 @@ footer
     margin: 0;
     padding: 0;
     width: 200px;
-    z-index: 1;
+   
     background-color: white;
     
     
@@ -50,15 +55,16 @@ footer
 .container ul::before
 {
     opacity: 0.4;
-    z-index: -1;
+    
 
 }
 .container li a {
     display: block;
     position: relative;    
         padding: 8px 32px;
-    text-decoration: none;
+        text-decoration: none;    
 }
+
 
 
 
@@ -72,20 +78,21 @@ footer
 }
 .container a.active
 {
-    background-image: url("MediaFiles/pokemonwhite.png");    
+    background-image: url("MediaFiles/pokemonwhitelarge.png");    
     
 }
 .container a:not(.active)
 {
-    background-image: url("MediaFiles/pokemondark.png")    
+    background-image: url("MediaFiles/pokemondarklarge.png")    
     
 }
 .container a:hover
 {
-    background-image: url("MediaFiles/pokemongrey.png")
-    
+    background-color: transparent;
+    animation-name: blacktogrey;
+    animation-duration: 2s;
 }
-h1, p
+.container 
 {
     color: white;
 text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
@@ -97,12 +104,7 @@ text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, 
     margin-left: auto;
     margin-right: auto;    
 }
-.index
-{
-    
 
-
-}
 .inhoud
 {
 color : white;
@@ -112,4 +114,10 @@ padding-bottom: 5cm;
 {
 height: 30px;
 width: 30px;
+}
+
+@keyframes blacktogrey
+{
+    from {background-image: url(MediaFiles/pokemondarklarge.png); width: 0px;}
+    to   {background-image: url(MediaFiles/pokemongreylarge.png); width: 136px;}
 }
