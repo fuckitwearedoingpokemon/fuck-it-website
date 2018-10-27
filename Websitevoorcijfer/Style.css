@@ -39,6 +39,7 @@ body{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center
     -o-background-size: cover;
 background-size: cover;
 }
+
 footer
 {    
     color: white;
@@ -136,7 +137,7 @@ width: 30px;
 border: 2px;
 border-style: solid;
 border-color: #420dab;
-float: left;
+align-content: center;
 display: flex;
 flex-direction: column;
 }
