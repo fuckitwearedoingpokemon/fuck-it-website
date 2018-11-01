@@ -7,6 +7,7 @@ html
     background-size: cover;
     padding-bottom: 5cm; 
 }
+
 a
 {
 color: #420dab;
@@ -17,20 +18,11 @@ p, h2, h3, .form
     color: white;
     text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
 }
+
 h1{
-    text-shadow:     
-    0 1px 0 #ccc, 
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0,0,0,.1),
-    0 0 5px rgba(0,0,0,.1),
-    0 1px 3px rgba(0,0,0,.3),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.25),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.15);
+   font-family: 'Times New Roman', Times, serif;
+   color: white;
+   border-bottom: slateblue 3px;       
 }
 
 body{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center fixed; 
@@ -39,6 +31,7 @@ body{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center
     -o-background-size: cover;
 background-size: cover;
 }
+
 footer
 {    
     color: white;
@@ -47,15 +40,15 @@ footer
     background-image: url(MediaFiles/footerbackground.png);
 
 }
+
 .container
 {        
     display: flex;  
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     flex-basis: 0 1 auto;
      font-family: "Arial";
 }
-
 
 .container ul
 {
@@ -63,17 +56,14 @@ footer
     margin: 0;
     padding: 0;
     width: 200px;
-   
     background-color: transparent;
-    
-    
 }
+
 .container ul::before
 {
     opacity: 0.4;
-    
-
 }
+
 .container li a {
     display: block;
     position: relative;    
@@ -106,7 +96,7 @@ footer
 {
     background-color: transparent;
     animation-name: blacktogrey;
-    animation-duration: 1s;
+    animation-duration: 2s;
     background-image: url("MediaFiles/pokemongreylarge.png")
 }
 .container 
@@ -125,6 +115,10 @@ text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, 
 .inhoud
 {
 color : white;   
+
+    margin-left: auto;
+    margin-right: auto; 
+    
 }
 .inhoud img
 {
@@ -150,8 +144,8 @@ flex-direction: column;
 }
 
 
-@keyframes blacktogrey
-{
+/* @keyframes blacktogrey */
+/* { */
     from 
     {
         /* background-image: url(MediaFiles/pokemondarklarge.png);*/ width: 0px; height: 18px; 
@@ -161,7 +155,35 @@ flex-direction: column;
         background-image: url(MediaFiles/pokemongreylarge.png);width: 136px; height: 18px;
          
     }
-}  
+/* }   */
+
+@keyframes blacktogrey
+{
+    from 
+    {
+        background-image: url(MediaFiles/pokemongreylarge.png); opacity: 0;
+    }
+
+    to   
+    {
+        background-image: url(MediaFiles/pokemongreylarge.png); opacity: 1;
+         
+    }
+}
+
+@keyframes TableHover
+{
+    from
+    {
+        background-color: transparent;
+    }
+    to
+    {
+        background-color: #7b50af;
+    }
+}
+
+
 /* width: 136px; height: 18px */
 @keyframes Spoiler
 {
@@ -236,11 +258,22 @@ flex-direction: column;
 {
     text-align: center;
 }
-nav
-{
-    background: white;
+table, th, td {
+    border: 1px solid black;
+ }
+table {
+    width: 60%;
 }
-body
-{
-    background: lightgrey;
+
+th {
+    background-color: #7b50af;
+    color: white;
+    height: 50px;
+    text-align: left;
+}
+tr:hover {
+    
+    animation-name: TableHover;
+    animation-duration: 2s;
+    background-color: #7b50af;
 }
