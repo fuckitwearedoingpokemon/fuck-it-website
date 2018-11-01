@@ -1,0 +1,11 @@
+from 
+    {        
+        content: url(MediaFiles/pokemongrey.png); opacity: 0;
+    }
+
+    to   
+    {
+        
+        content:  url(MediaFiles/pokemongrey.png); opacity: 1;
+         
+    }

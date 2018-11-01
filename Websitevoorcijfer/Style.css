@@ -22,7 +22,8 @@ p, h2, h3, .form
 h1{
    font-family: 'Times New Roman', Times, serif;
    color: white;
-   border-bottom: slateblue 3px;       
+   border-bottom: slateblue 3px;     
+   text-shadow: black 1px;  
 }
 
 body{ background: url("MediaFiles/pokemonwallpaper.png") no-repeat center center fixed; 
@@ -53,10 +54,12 @@ footer
 .container ul
 {
     list-style-type: none;
-    margin: 0;
+    margin: 0; 
     padding: 0;
-    width: 200px;
+    /* width: auto; */
     background-color: transparent;
+    display: flex;
+    flex-direction: row;
 }
 
 .container ul::before
@@ -65,11 +68,13 @@ footer
 }
 
 .container li a {
-    display: block;
+    display: flex;
+    flex-direction: row;
     position: relative;    
         padding: 8px 32px;
         text-decoration: none;    
 }
+
 
 
 
@@ -82,22 +87,43 @@ footer
     background-repeat: no-repeat;
 
 }
+.container a.active::after
+{
+    content:url("MediaFiles/pokemonwhite.png");    
+    
+}
+.container a:not(.active)::after
+{
+    content:url("MediaFiles/pokemontrans.png")    
+    
+}
+.container a:hover::after
+{
+    
+    content:url("MediaFiles/pokemontrans.png");
+    background-color: transparent;
+    animation-name: blacktogrey;
+    animation-duration: 2s;    
+    background-color: #666564;
+    
+}
 .container a.active
 {
-    background-image: url("MediaFiles/pokemonwhitelarge.png");    
+      background-color: white;
     
 }
 .container a:not(.active)
 {
-    background-image: url("MediaFiles/pokemontranslarge.png")    
+       background-color: transparent
     
 }
 .container a:hover
 {
     background-color: transparent;
-    animation-name: blacktogrey;
-    animation-duration: 2s;
-    background-image: url("MediaFiles/pokemongreylarge.png")
+    animation-name: backgroundNavBar;
+    animation-duration: 2s; 
+    background-color: #666564;
+    
 }
 .container 
 {
@@ -142,32 +168,31 @@ flex-direction: column;
     opacity: 0;
     
 }
+@keyframes backgroundNavBar
+{
 
-
-/* @keyframes blacktogrey */
-/* { */
     from 
     {
-        /* background-image: url(MediaFiles/pokemondarklarge.png);*/ width: 0px; height: 18px; 
+        background-color: transparent;
     }
-    to   
+    to
     {
-        background-image: url(MediaFiles/pokemongreylarge.png);width: 136px; height: 18px;
-         
+        background-color: #666564;
     }
-/* }   */
+
+}
 
 @keyframes blacktogrey
 {
     from 
     {
-        background-image: url(MediaFiles/pokemongreylarge.png); opacity: 0;
+        background-color: transparent;
+        content:url("MediaFiles/pokemontrans.png");
     }
-
-    to   
+    to
     {
-        background-image: url(MediaFiles/pokemongreylarge.png); opacity: 1;
-         
+        /* background-color: #666564; */
+        content:url("MediaFiles/pokemontrans.png");   
     }
 }
 
@@ -199,7 +224,6 @@ flex-direction: column;
         font-size: 110%
     }
 }
-
 
 
 .spoiler:nth-of-type(1):hover
@@ -276,4 +300,12 @@ tr:hover {
     animation-name: TableHover;
     animation-duration: 2s;
     background-color: #7b50af;
+}
+
+.youtube iframe:hover
+{
+    /* transform: scale(1.5, 1.5); */
+    transform: rotate3d(50,50,50);
+    transition-duration: 2s;
+
 }
