@@ -147,7 +147,7 @@ width: 30px;
 border: 2px;
 border-style: solid;
 border-color: #420dab;
-float: left;
+align-content: center;
 display: flex;
 flex-direction: column;
 padding-left: 10px;
