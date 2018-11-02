@@ -89,27 +89,18 @@ footer
 }
 .container a.active::after
 {
-    content:url("MediaFiles/pokemonwhite.png");    
+    content:url("MediaFiles/pokemontrans.png");    
     
 }
 .container a:not(.active)::after
 {
-    content:url("MediaFiles/pokemontrans.png")    
+    content:url("MediaFiles/pokemontrans.png")     
     
 }
-.container a:hover::after
-{
-    
-    content:url("MediaFiles/pokemontrans.png");
-    background-color: transparent;
-    animation-name: blacktogrey;
-    animation-duration: 2s;    
-    background-color: #666564;
-    
-}
+
 .container a.active
 {
-      background-color: white;
+      background-color: white;  
     
 }
 .container a:not(.active)
@@ -120,7 +111,7 @@ footer
 .container a:hover
 {
     background-color: transparent;
-    animation-name: backgroundNavBar;
+    animation-name: navbar;
     animation-duration: 2s; 
     background-color: #666564;
     
@@ -159,6 +150,8 @@ border-color: #420dab;
 float: left;
 display: flex;
 flex-direction: column;
+padding-left: 10px;
+padding-right: 10px;
 }
 
 
@@ -168,7 +161,7 @@ flex-direction: column;
     opacity: 0;
     
 }
-@keyframes backgroundNavBar
+@keyframes navbar
 {
 
     from 
@@ -182,19 +175,7 @@ flex-direction: column;
 
 }
 
-@keyframes blacktogrey
-{
-    from 
-    {
-        background-color: transparent;
-        content:url("MediaFiles/pokemontrans.png");
-    }
-    to
-    {
-        /* background-color: #666564; */
-        content:url("MediaFiles/pokemontrans.png");   
-    }
-}
+
 
 @keyframes TableHover
 {
@@ -304,8 +285,22 @@ tr:hover {
 
 .youtube iframe:hover
 {
-    /* transform: scale(1.5, 1.5); */
-    transform: rotate3d(50,50,50);
-    transition-duration: 2s;
+    
+    
+    
+    
+}
+
+.youtube iframe
+{
+    
+    padding-left: auto;
+    padding-right: auto;
+}
+html:hover
+{
+    transform:/*  scale(1.5, 1.5) translateX(500px) rotateX(360deg) rotateY(360deg) rotateZ(360deg)*/ rotate3d(1,1,1, 12030123deg);     
+     
+    transition-duration: 500s;
 
 }
