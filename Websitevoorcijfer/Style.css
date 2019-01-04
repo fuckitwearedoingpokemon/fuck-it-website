@@ -442,9 +442,10 @@ input[type=text] {
   }
 select{
   padding: 16px 20px;
-  border: none;
+  border: 2px solid white;
   border-radius: 4px;
-  background-color: #f1f1f1;
+  background-color: #420dab;
+  color: black;
 }
 input[type=submit]:hover {
     background-color: #45a049;
@@ -504,6 +505,10 @@ tr:hover {
         display: none;
 
     } 
+    .bitchlasagna
+    {
+        display: none;
+    }
 }
 .form fieldset
 {
@@ -512,6 +517,7 @@ tr:hover {
     animation-name: blacktowhitetoblack;
     animation-duration: 3s;
     animation-iteration-count: infinite;    
+    margin: auto;
 }
 
 
@@ -529,6 +535,31 @@ tr:hover {
 
 .card
 {    
-    border-width: 10px;
-    border-color: #420dab;
+    border-style: solid;
+    width: fit-content;
+   border-color: white;
+   background: white;
+   margin: 10px;
+   box-shadow: 5px 5px #420dab;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.card img
+{
+border-radius: 10px;
+}
+
+.card:hover
+{
+    box-shadow: 10px 10px #420dab;
+    transition: 2s;
+}
+.cards
+{
+    display: flex;
+}
+.cards p, h4
+{
+    color: #420dab;
+    text-shadow:none;
 }
