@@ -19,7 +19,7 @@ a
 color: #420dab;
 }
 
-p, h2, h3, .form
+p, h2, h3, .form, .TVClass
 {
     color: white;
     text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
@@ -49,7 +49,8 @@ footer
 }
 
 .navbar
-{        
+{      
+    
     display: flex;  
     flex-direction: row;
     flex-wrap: wrap;
@@ -74,6 +75,7 @@ footer
 }
 
 .navbar li a {
+    
     display: flex;
     flex-direction: row;
     position: relative;    
@@ -89,6 +91,7 @@ footer
 
 .navbar a
 {    
+    font-family: 'Source Sans Pro', sans-serif;
     text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
     color: white;
     cursor:pointer;      
@@ -180,7 +183,7 @@ text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, 
 
 
 .indexnavbar a
-{    
+{    font-family: 'Source Sans Pro', sans-serif;
     font-size: 30px;
     color: white;
     cursor:pointer;      
@@ -256,7 +259,6 @@ text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, 
     list-style-type: none;
     margin: 0; 
     padding: 0;
-    /* width: auto; */
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -430,8 +432,23 @@ padding-right: 10px;
 
 .form
 {
+    align-content: center;
+    justify-content: center;
     text-align: center;
 }
+input[type=text] {
+    border: 2px solid purple;
+    border-radius: 4px;
+  }
+select{
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+  }
 table, th, td {
     border: 1px solid black;
  }
@@ -452,27 +469,66 @@ tr:hover {
     background-color: #7b50af;
 }
 
-.youtube iframe:hover
-{
-    
-    transform: 
-    scale(1.5, 1.5)
-    translateX(500px) rotateX(360deg);
-    transition-duration: 5s;
-    
-    
-}
-
 .youtube iframe
 {
     
     padding-left: auto;
     padding-right: auto;
 }
-/* html:hover
-{
-    transform:/*  scale(1.5, 1.5) translateX(500px) rotateX(360deg) rotateY(360deg) rotateZ(360deg)*/ rotate3d(1,1,1, 12030123deg);     
-     
-    transition-duration: 500s;
 
-} */
+@media screen and (max-width: 1000px) {
+    .navbar ul{
+        flex-direction: column;
+        text-align: center;
+      }
+
+}
+
+@media screen and (max-width: 600px) {
+    
+    .navbar a.active::after
+    {
+        content:none;    
+        
+    }
+    .navbar a:not(.active)::after
+    {
+        content:none;
+    }
+    footer{
+        display: none;
+    }
+    
+     .inhoud img
+    {
+        display: none;
+
+    } 
+}
+.form fieldset
+{
+    width: fit-content;
+    text-align: center;
+    animation-name: blacktowhitetoblack;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;    
+}
+
+
+@keyframes blacktowhitetoblack
+{
+    0%{
+        border-color: black;
+        color: black;
+    }
+    50%{border-color: white;
+        color: white}
+    100%{border-color: black;
+        color: black}
+}
+
+.card
+{    
+    border-width: 10px;
+    border-color: #420dab;
+}

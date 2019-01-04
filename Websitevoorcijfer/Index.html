@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="Style.css">
         <link rel="icon" href="images/pikapixel.png">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <title>APF</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -41,13 +42,22 @@
     </ul>
 </div>
      <div class="form">
-            <form>
-                <input type="text" name="field1" placeholder="Your Name" /><br>
-                <input type="email" name="field2" placeholder="Email Address" /><br>
+            <form>                
+                <fieldset>
+                <legend>Persoonlijke Gegevens</legend>
+                <input type="text" name="field1" placeholder="Your Name"/><br>
+                <input type="email" name="field2" placeholder="Email Address"/><br>
                 <input type="text" name="field3" placeholder="Country of Origin"><br>
-                <textarea name="field3" placeholder="Type your Message"></textarea><br>
+                <input type="radio" name="gender" value="Man" checked> Male<br>
+                <input type="radio" name="gender" value="Woman"> Female<br>
+                <input name="Sexuele geaardheid[]" type="checkbox" value="Homo" /> Homo <br>
+	            <input name="Sexuele geaardheid[]" type="checkbox" value="Hetro" /> Hetro <br>
+	            <input name="Sexuele geaardheid[]" type="checkbox" value="BI" /> BI <br>
+                <input type="number" name="quantity" placeholder="Age" min="0" max="150"> <br>
+                </fieldset>
+                <textarea name="field3" placeholder="Type Something nice"></textarea><br>
                 <label for="Fav">Favorite Pokemon Game</label><br>
-                <select name="FavPokemonGAme" id="FAv">
+                <select name="FavPokemonGAme" id="FAV">
                     <option value="Red en Blue">Red en Blue</option>
                     <option value="Gold en Silver">Gold en Silver</option>
                     <option value="Ruby en Sapphire">Ruby en Sapphire</option>
@@ -66,7 +76,7 @@
     </body>
     <footer>
         <address>
-            Created by <a href="mailto:nbuch@student.avans.nl">Noah Buch</a> and <a href="mailto:jdirksen@student.avans.nl">Jonah Dirksen</a>. <br>
+            Created by <a href="cards.html">Noah Buch and Jonah Dirksen</a>. <br>
             Find us at: <br>  
             Onderwijsboulevard 215 <br>
             5223 DE <br>
