@@ -8,6 +8,12 @@ html
     padding-bottom: 5cm; 
 }
 
+.Title
+{
+    text-align: center;
+
+}
+
 a
 {
 color: #420dab;
@@ -42,7 +48,7 @@ footer
 
 }
 
-.container
+.navbar
 {        
     display: flex;  
     flex-direction: row;
@@ -51,7 +57,7 @@ footer
      font-family: "Arial";
 }
 
-.container ul
+.navbar ul
 {
     list-style-type: none;
     margin: 0; 
@@ -62,12 +68,12 @@ footer
     flex-direction: row;
 }
 
-.container ul::before
+.navbar ul::before
 {
     opacity: 0.4;
 }
 
-.container li a {
+.navbar li a {
     display: flex;
     flex-direction: row;
     position: relative;    
@@ -79,7 +85,9 @@ footer
 
 
 
-.container a
+
+
+.navbar a
 {    
     text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
     color: white;
@@ -87,41 +95,189 @@ footer
     background-repeat: no-repeat;
 
 }
-.container a.active::after
+.navbar a.active::after
 {
     content:url("MediaFiles/pokemontrans.png");    
     
 }
-.container a:not(.active)::after
+.navbar a:not(.active)::after
 {
     content:url("MediaFiles/pokemontrans.png")     
     
 }
 
-.container a.active
+.navbar a.active
 {
       background-color: white;  
     
 }
-.container a:not(.active)
+.navbar a:not(.active)
 {
        background-color: transparent
     
 }
-.container a:hover
+.navbar a:hover:not(.active)
 {
     background-color: transparent;
-    animation-name: navbar;
+    animation-name: navbar;  
     animation-duration: 2s; 
     background-color: #666564;
     
 }
-.container 
+.navbar a.active:hover
+{
+    background-color: transparent;
+    animation-name: activenavbar;
+    animation-duration: 2s; 
+    background-color: #666564;
+    
+}
+.navbar 
 {
     color: white;
 text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
 
 }
+
+.navbar
+{        
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 0 1 auto;
+     font-family: "Arial";
+}
+
+.navbar ul
+{
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+    /* width: auto; */
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar ul::before
+{
+    opacity: 0.4;
+}
+
+.navbar li a {
+    display: flex;
+    flex-direction: row;
+    position: relative;    
+        padding: 8px 32px;
+        text-decoration: none;    
+    
+}
+
+
+
+
+
+
+
+.indexnavbar a
+{    
+    font-size: 30px;
+    color: white;
+    cursor:pointer;      
+    background-repeat: no-repeat;
+
+}
+.indexnavbar a.active::after
+{
+    content:url("MediaFiles/pokemontrans.png");    
+    
+}
+.indexnavbar a.active::before
+{
+    content:url("MediaFiles/pokemontrans.png");    
+    
+}
+.indexnavbar a:not(.active)::after
+{
+    content:url("MediaFiles/pokemontrans.png")     
+    
+}
+.indexnavbar a:not(.active)::before
+{
+    content:url("MediaFiles/pokemontrans.png")     
+    
+}
+
+.indexnavbar a.active
+{
+      background-color: white;  
+      text-shadow: 0.05em 0 black, 0 0.05em black, -0 .05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
+    
+}
+.indexnavbar a:not(.active)
+{
+    text-shadow: 2px 2px #420dab;
+       background-color: transparent
+    
+}
+.indexnavbar a:hover:not(.active)
+{
+    background-color: transparent;
+    animation-name: navbar;  
+    animation-duration: 2s; 
+    background-color: #666564;
+    
+}
+.indexnavbar a.active:hover
+{
+    background-color: transparent;
+    animation-name: activenavbar;
+    animation-duration: 1.5s; 
+    background-color: #666564;
+    
+}
+
+.indexnavbar
+{        
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 0 1 auto;
+     font-family: "Arial";
+     align-items: center;
+    justify-content: center;
+    
+}
+
+.indexnavbar ul
+{
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+    /* width: auto; */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.indexnavbar ul::before
+{
+    opacity: 0.4;
+}
+
+.indexnavbar li a {
+    display: flex;
+    flex-direction: row;
+    position: relative;    
+        padding: 8px 32px;
+        text-decoration: none;  
+        
+        border-radius: 5000px;
+}
+
 .Poster
 {
     display: block;
@@ -167,6 +323,19 @@ padding-right: 10px;
     from 
     {
         background-color: transparent;
+    }
+    to
+    {
+        background-color: #666564;
+    }
+
+}
+@keyframes activenavbar
+{
+
+    from 
+    {
+        background-color: white;
     }
     to
     {
@@ -286,7 +455,10 @@ tr:hover {
 .youtube iframe:hover
 {
     
-    
+    transform: 
+    scale(1.5, 1.5)
+    translateX(500px) rotateX(360deg);
+    transition-duration: 5s;
     
     
 }
@@ -297,10 +469,10 @@ tr:hover {
     padding-left: auto;
     padding-right: auto;
 }
-html:hover
+/* html:hover
 {
     transform:/*  scale(1.5, 1.5) translateX(500px) rotateX(360deg) rotateY(360deg) rotateZ(360deg)*/ rotate3d(1,1,1, 12030123deg);     
      
     transition-duration: 500s;
 
-}
+} */
